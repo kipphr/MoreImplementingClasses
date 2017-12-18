@@ -2,8 +2,8 @@
 A   Baby   class and methods that use the Baby class.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Dutch Kipp.
+"""  # done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -37,9 +37,14 @@ def main():
         for j in range(4):
             mckinley.hour_passes()
 
+    print('- - - - -')
+    jimmy = Baby('Jimmy')
+    jimmy.hours_passed = 25
+    jimmy.hour_passes()
+
 
 # ----------------------------------------------------------------------
-# TODO: 2. Implement a class called   Baby   that has a constructor and
+# done: 2. Implement a class called   Baby   that has a constructor and
 #   two methods, as described below.  Your finished Baby class should
 #   cause the code above to display the expected output.  Hint: Your
 #   class will need instance variables that you must figure out.
@@ -90,11 +95,28 @@ def main():
 #
 ########################################################################
 
+class Baby(object):
 
+    def __init__(self, name):
+        self.name = str(name)
+        print('Hello baby ' + self.name)
+        self.hours_passed = 0
 
+    def feed_baby(self):
+        self.hours_passed = 0
+        print("Thank you for feeding baby " + self.name)
 
-
-
+    def hour_passes(self):
+        self.hours_passed = self.hours_passed + 1
+        if self.hours_passed == 1:
+            print('Baby ' + self.name + ' is sleeping.')
+        if self.hours_passed == 2:
+            print('Baby ' + self.name + ' is awake.  Time for food.')
+        if self.hours_passed >= 3 and self.hours_passed < 20:
+            print('Baby ' + self.name + ' is CRYING uncontrollably!  Feed the Baby!')
+        if self.hours_passed >= 20:
+            print('Baby ' + self.name + ' is unresponsive. Seek medical attention. And a lawyer.')
+            
 
 # ----------------------------------------------------------------------
 # If this module is running at the top level (as opposed to being
