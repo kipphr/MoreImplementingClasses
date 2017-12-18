@@ -116,7 +116,7 @@ class Baby(object):
             print('Baby ' + self.name + ' is CRYING uncontrollably!  Feed the Baby!')
         if self.hours_passed >= 20:
             print('Baby ' + self.name + ' is unresponsive. Seek medical attention. And a lawyer.')
-            
+
 
 # ----------------------------------------------------------------------
 # If this module is running at the top level (as opposed to being
