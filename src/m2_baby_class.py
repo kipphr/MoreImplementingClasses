@@ -115,7 +115,8 @@ class Baby(object):
         if self.hours_passed >= 3 and self.hours_passed < 20:
             print('Baby ' + self.name + ' is CRYING uncontrollably!  Feed the Baby!')
         if self.hours_passed >= 20:
-            print('Baby ' + self.name + ' is unresponsive. Seek medical attention. And a lawyer.')
+            print('More than 20 hours have passed.')
+            print('Baby ' + self.name + ' is unresponsive. Seek medical attention. And probably a lawyer.')
 
 
 # ----------------------------------------------------------------------
